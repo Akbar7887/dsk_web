@@ -1,9 +1,10 @@
 import 'dart:html';
 
-import 'package:dsk_web/models/uij.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:google_maps/google_maps.dart';
+
+import '../models/uij.dart';
 
 
 class GoogleMap extends StatelessWidget {
@@ -14,47 +15,47 @@ class GoogleMap extends StatelessWidget {
     String htmlId = "7";
     // final PlatformViewRegistry platformViewRegistry = PlatformViewRegistry._();
 
-  //   ui.platformViewRegistry.registerViewFactory(htmlId, (int viewId) {
-  //     final myLatlng = LatLng(41.183282556383446, 69.25169694232872);
-  //
-  //     // another location
-  //     final myLatlng2 = LatLng(41.183282556383446, 69.25169694232872);
-  //
-  //     final mapOptions = MapOptions()
-  //       ..zoom = 15
-  //       ..maxZoom = 20
-  //
-  //       ..center = LatLng(41.183282556383446, 69.25169694232872);
-  //
-  //     final elem = DivElement()
-  //       ..id = htmlId
-  //       ..style.width = "100%"
-  //       ..style.height = "100%"
-  //       ..style.border = 'none';
-  //
-  //     final map = GMap(elem, mapOptions);
-  //
-  //     final marker = Marker(MarkerOptions()
-  //       ..position = myLatlng
-  //       ..map = map
-  //       ..title = UiJ.companyName
-  //       // ..icon = 'assets/images/logo1.png'
-  //       ..label = UiJ.companyName);
-  //     // ..icon =
-  //     //     'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png');
-  //
-  //     // Another marker
-  //     Marker(
-  //       MarkerOptions()
-  //         ..position = myLatlng2
-  //         ..map = map,
-  //     );
-  //
-  //     final infoWindow =
-  //         InfoWindow(InfoWindowOptions()..content = contentString);
-  //     marker.onClick.listen((event) => infoWindow.open(map, marker));
-  //     return elem;
-  //   });
+    ui.platformViewRegistry.registerViewFactory(htmlId, (int viewId) {
+      final myLatlng = LatLng(41.183282556383446, 69.25169694232872);
+
+      // another location
+      final myLatlng2 = LatLng(41.183282556383446, 69.25169694232872);
+
+      final mapOptions = MapOptions()
+        ..zoom = 15
+        ..maxZoom = 20
+
+        ..center = LatLng(41.183282556383446, 69.25169694232872);
+
+      final elem = DivElement()
+        ..id = htmlId
+        ..style.width = "100%"
+        ..style.height = "100%"
+        ..style.border = 'none';
+
+      final map = GMap(elem, mapOptions);
+
+      final marker = Marker(MarkerOptions()
+        ..position = myLatlng
+        ..map = map
+        ..title = UiJ.companyName
+      // ..icon = 'assets/images/logo1.png'
+        ..label = UiJ.companyName);
+      // ..icon =
+      //     'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png');
+
+      // Another marker
+      Marker(
+        MarkerOptions()
+          ..position = myLatlng2
+          ..map = map,
+      );
+
+      final infoWindow =
+      InfoWindow(InfoWindowOptions()..content = contentString);
+      marker.onClick.listen((event) => infoWindow.open(map, marker));
+      return elem;
+    });
     return HtmlElementView(viewType: htmlId);
   }
 }

@@ -74,10 +74,10 @@ class FirstPage extends StatelessWidget {
                                             child: Card(
                                                 elevation: 5,
                                                 child: Container(
-                                                    decoration: BoxDecoration(
-                                                        border: Border.all(
-                                                            color: UiJ.border_color)),
-                                                    margin: EdgeInsets.all(10),
+                                                    // decoration: BoxDecoration(
+                                                    //     border: Border.all(
+                                                    //         color: UiJ.border_color)),
+                                                    // margin: EdgeInsets.all(10),
                                                     child: Image.network(
                                                       '${UiJ.url}kompleks/v1/download/house/${e.mainimagepath}',
                                                       fit: BoxFit.fitHeight,

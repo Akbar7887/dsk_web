@@ -94,8 +94,8 @@ class KompleksDetailesPage extends StatelessWidget {
                           child: Card(
                               child: Container(
                                   decoration: BoxDecoration(
-                                      border: Border.all(
-                                          color: UiJ.border_color)),
+                                      border:
+                                          Border.all(color: UiJ.border_color)),
                                   padding: EdgeInsets.all(10),
                                   child: Column(
                                     children: [
@@ -135,10 +135,8 @@ class KompleksDetailesPage extends StatelessWidget {
                     autoPlayCurve: Curves.fastOutSlowIn,
                     enlargeCenterPage: true,
                     onPageChanged: (int? value, page) {
-// setState(() {
                       _current = value!;
 
-// print("${_current}");
                     }))),
       ],
     );

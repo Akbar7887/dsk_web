@@ -82,11 +82,12 @@ class getDrawer extends StatelessWidget {
                               UiJ.callInstagram();
                             },
                             icon: Image.asset(
-                                'assets/images/Instagram_icon.png')),
+                                'assets/images/Instagram_icon.png', width: 20,height: 20,)),
                         IconButton(
                             onPressed: () {
                               UiJ.callTelegram();
                             },
+                            iconSize: 20,
                             icon: Icon(
                               Icons.telegram,
                               color: Colors.blue,
