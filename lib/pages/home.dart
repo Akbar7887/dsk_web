@@ -1,4 +1,5 @@
 import 'package:dsk_web/conrollers/Controller.dart';
+import 'package:dsk_web/pages/AboutCompany.dart';
 import 'package:dsk_web/pages/catalog_main_page.dart';
 import 'package:dsk_web/pages/job_page.dart';
 import 'package:dsk_web/pages/komleks_third_page.dart';
@@ -9,6 +10,7 @@ import 'package:dsk_web/pages/shoping_box.dart';
 import 'package:dsk_web/pages/study_page.dart';
 import 'package:dsk_web/widgets/getDrawer.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -37,6 +39,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   final _controller = Get.put(Controller());
   ScrollController _scrollController = ScrollController();
   double _scrollPosition = 0;
+  List<String> dropdownvalue = ["О Компаний", "Руководство", "Вакансия"];
+  int idx = 0;
 
   @override
   void initState() {
@@ -104,11 +108,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       ? Container()
                       : TabBar(
                           controller: tabController,
-
-                          indicatorColor: Colors.white,
+                          dividerColor: Colors.transparent,
+                          indicatorColor: Colors.transparent,
                           labelColor: Colors.red,
                           unselectedLabelColor: Colors.black,
-                          indicatorWeight: 1,
+                          indicatorWeight: 0.5,
                           labelStyle: TextStyle(
                               fontSize: UiJ.sizeweight(context) ? 15 : 20,
                               fontFamily: UiJ.font),
@@ -137,10 +141,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             Container(
                                 // width: 200,
                                 child: Tab(
+                                    child: DropdownButtonHideUnderline(
                               child: AboutMenu_DropDown(
                                 vertical: false,
                               ),
-                            )),
+                            ))),
                             Container(
                               // width: 200,
                               child: Tab(
@@ -204,7 +209,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           : 20,
                     )),
                 Obx(() => Text(
-                  _controller.orderlist.length.toString(),
+                      _controller.orderlist.length.toString(),
                       style: TextStyle(
                           fontFamily: UiJ.fontbold,
                           fontSize:
@@ -265,7 +270,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         accelerationCurve: Curves.linear,
                         decelerationDuration: Duration(milliseconds: 500),
                         decelerationCurve: Curves.easeOut,
-
                       )),
                 ),
                 Container(
@@ -325,6 +329,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         return KompleksThirdPage();
       case 9:
         return KompleksForthPage();
+      case 10:
+        return AboutCompany();
     }
   }
 }

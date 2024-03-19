@@ -36,9 +36,6 @@ class _AboutMenu_DropDownState extends State<AboutMenu_DropDown> {
         position: PopupMenuPosition.under,
         elevation: 5,
         offset: const Offset(0, 20),
-
-        // icon: Icon(Icons.arrow_drop_down),
-        //iconSize: 20,
         child: Row(children: [
           Text(
             "О Компании",
@@ -49,9 +46,21 @@ class _AboutMenu_DropDownState extends State<AboutMenu_DropDown> {
         itemBuilder: (BuildContext context) => <PopupMenuEntry<Menu>>[
               PopupMenuItem(
                   onTap: () {
+                    controller.changeindexpage(10);
+                    controller.changeindextab(0);
+                  },
+                  textStyle:
+                      TextStyle(fontSize: UiJ.sizeweight(context) ? 15 : 20),
+                  value: Menu.About,
+                  child: Text("О Компаний",
+                      style: TextStyle(
+                          fontSize: UiJ.sizeweight(context) ? 15 : 20,
+                          fontFamily: UiJ.font,
+                          color: Colors.black))),
+              PopupMenuItem(
+                  onTap: () {
                     controller.changeindexpage(2);
                     controller.changeindextab(0);
-                    ;
                   },
                   textStyle:
                       TextStyle(fontSize: UiJ.sizeweight(context) ? 15 : 20),
@@ -61,18 +70,6 @@ class _AboutMenu_DropDownState extends State<AboutMenu_DropDown> {
                           fontSize: UiJ.sizeweight(context) ? 15 : 20,
                           fontFamily: UiJ.font,
                           color: Colors.black))),
-              // PopupMenuItem(
-              //     textStyle: TextStyle(fontSize: 20),
-              //     onTap: () {
-              //       controller.changeindexpage(3);
-              //       controller.changeindextab(0);
-              //     },
-              //     value: Menu.News,
-              //     child: Text("Новости",
-              //         style: TextStyle(
-              //             fontSize: UiJ.sizeweight(context) ? 20 : 25,
-              //             fontFamily: UiJ.font,
-              //             color: Colors.black))),
               PopupMenuItem(
                   textStyle: TextStyle(fontSize: 20),
                   onTap: () {
