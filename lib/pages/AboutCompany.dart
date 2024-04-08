@@ -95,7 +95,7 @@ class AboutCompany extends StatelessWidget {
                     ),
                     Container(
                       height: MediaQuery.of(context).size.height / 2,
-                      child: Image.asset("../../assets/images/img_1.png"),
+                      child: Image.asset("assets/images/img_1.png"),
                     )
                   ])),
                   SizedBox(
@@ -124,7 +124,7 @@ class AboutCompany extends StatelessWidget {
                       Container(
                         // width: 200,
                         height: MediaQuery.of(context).size.height / 2,
-                        child: Image.asset("../../assets/images/img.png"),
+                        child: Image.asset("assets/images/img.png"),
                       )
                     ]),
                   ),
@@ -155,7 +155,7 @@ class AboutCompany extends StatelessWidget {
                       Container(
                         // width: 200,
                         height: MediaQuery.of(context).size.height / 2,
-                        child: Image.asset("../../assets/images/img_2.png"),
+                        child: Image.asset("assets/images/img_2.png"),
                       )
                     ],
                   ))
@@ -190,28 +190,28 @@ class AboutCompany extends StatelessWidget {
                   Container(
                       width: MediaQuery.of(context).size.width / 5,
                       height: MediaQuery.of(context).size.height / 3,
-                      child: Image.asset("../../assets/images/img_3.png")),
+                      child: Image.asset("assets/images/img_3.png")),
                   SizedBox(
                     width: 20,
                   ),
                   Container(
                       width: MediaQuery.of(context).size.width / 5,
                       height: MediaQuery.of(context).size.height / 3,
-                      child: Image.asset("../../assets/images/img_4.png")),
+                      child: Image.asset("assets/images/img_4.png")),
                   SizedBox(
                     width: 20,
                   ),
                   Container(
                       width: MediaQuery.of(context).size.width / 5,
                       height: MediaQuery.of(context).size.height / 3,
-                      child: Image.asset("../../assets/images/img_5.png")),
+                      child: Image.asset("assets/images/img_5.png")),
                   SizedBox(
                     width: 20,
                   ),
                   Container(
                       width: MediaQuery.of(context).size.width / 5,
                       height: MediaQuery.of(context).size.height / 3,
-                      child: Image.asset("../../assets/images/production.png"))
+                      child: Image.asset("assets/images/production.png"))
                 ],
               ),
             ),
@@ -255,7 +255,7 @@ class AboutCompany extends StatelessWidget {
                             ))),
                     Expanded(
                         child: Image.asset(
-                      "../../assets/images/img_6.png",
+                      "assets/images/img_6.png",
                       height: MediaQuery.of(context).size.height / 2.5,
                     ))
                   ],
@@ -269,7 +269,7 @@ class AboutCompany extends StatelessWidget {
                   children: [
                     Expanded(
                         child: Image.asset(
-                      "../../assets/images/img_7.png",
+                      "assets/images/img_7.png",
                       height: MediaQuery.of(context).size.height / 2.5,
                     )),
                     Expanded(
@@ -313,7 +313,7 @@ class AboutCompany extends StatelessWidget {
                             ))),
                     Expanded(
                         child: Image.asset(
-                      "../../assets/images/img_8.png",
+                      "assets/images/img_8.png",
                       height: MediaQuery.of(context).size.height / 2.5,
                     )),
                   ],
@@ -326,13 +326,13 @@ class AboutCompany extends StatelessWidget {
               height: 20,
             ),
             Container(
-                width: MediaQuery.of(context).size.width / 5,
+                padding: EdgeInsets.only(left: MediaQuery.of(context).size.width / 2),
                 child: Container(
                     alignment: Alignment.center,
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.amber)),
+                        border: Border.all(color: Colors.amber,width: 2)),
                     child: Container(
                       alignment: Alignment.center,
                       padding: EdgeInsets.all(20),

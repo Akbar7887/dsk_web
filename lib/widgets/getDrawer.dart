@@ -134,6 +134,30 @@ class getDrawer extends StatelessWidget {
                     ListTile(
                       title: Center(
                           child: Text(
+                            'О Компании',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: UiJ.font,
+                                color: Colors.black),
+                          )),
+                      iconColor: Colors.black38,
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right_outlined,
+                        size: 25,
+                      ),
+                      onTap: () {
+                        controller.changeindexpage(10);
+                        controller.changeindextab(0);
+                        Navigator.pop(context);
+                        // controller.changeindexpage(1);
+                        // controller.changeindextab(1);
+                        // Navigator.pop(context);
+                      },
+                    ),
+                    Divider(),
+                    ListTile(
+                      title: Center(
+                          child: Text(
                         'Руководство',
                         style: TextStyle(
                             fontSize: 20,
